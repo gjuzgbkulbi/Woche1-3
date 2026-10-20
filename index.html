@@ -328,10 +328,50 @@
       }
 
       .news-grid,
-      .project-grid {
+      .project-grid,
+      .map-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.25rem;
+      }
+
+      .map-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .map-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .map-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1rem 0.75rem;
+      }
+
+      .map-card-header h3 {
+        margin: 0;
+      }
+
+      .map-link {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.85rem;
+      }
+
+      .map-card iframe {
+        display: block;
+        width: 100%;
+        height: 360px;
+        border: 0;
+        background: #edf3f5;
       }
 
       .card {
@@ -443,6 +483,9 @@
             </button>
             <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="projects-panel" id="projects-tab" data-tab="projects">
               Projekte
+            </button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="maps-panel" id="maps-tab" data-tab="maps">
+              Karten
             </button>
           </div>
 
@@ -603,6 +646,46 @@
               <p>Plattform für räumliche Analyse, Kartenerstellung und digitale Entscheidungsprozesse.</p>
             </div>
           </a>
+        </div>
+      </section>
+
+      <section id="maps-panel" class="tab-panel" role="tabpanel" aria-labelledby="maps-tab">
+        <div class="section-heading">
+          <h2>Karten</h2>
+        </div>
+
+        <div class="map-grid">
+          <article class="map-card">
+            <div class="map-card-header">
+              <h3>Basiskarte</h3>
+              <a class="map-link" href="map_1_basiskarte.html" target="_blank" rel="noreferrer">Vollbild</a>
+            </div>
+            <iframe src="map_1_basiskarte.html" title="Basiskarte" loading="lazy"></iframe>
+          </article>
+
+          <article class="map-card">
+            <div class="map-card-header">
+              <h3>Punkte</h3>
+              <a class="map-link" href="map_2_punkte.html" target="_blank" rel="noreferrer">Vollbild</a>
+            </div>
+            <iframe src="map_2_punkte.html" title="Punkte" loading="lazy"></iframe>
+          </article>
+
+          <article class="map-card">
+            <div class="map-card-header">
+              <h3>Reiseroute</h3>
+              <a class="map-link" href="map_3_reiseroute.html" target="_blank" rel="noreferrer">Vollbild</a>
+            </div>
+            <iframe src="map_3_reiseroute.html" title="Reiseroute" loading="lazy"></iframe>
+          </article>
+
+          <article class="map-card">
+            <div class="map-card-header">
+              <h3>Flächen online</h3>
+              <a class="map-link" href="map_4_flaechen_online.html" target="_blank" rel="noreferrer">Vollbild</a>
+            </div>
+            <iframe src="map_4_flaechen_online.html" title="Flächen online" loading="lazy"></iframe>
+          </article>
         </div>
       </section>
     </main>
